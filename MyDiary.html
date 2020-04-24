@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>My Secret Diary</title>
+	<style>
+		body {
+  			background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20190222/ourmid/pngtree-fashion-ballet-wallpaper-background-pattern-wallpaperwrapping-paper-image_50929.jpg');
+  			background-repeat: no-repeat;
+  			background-attachment: fixed;
+  			background-size: cover;
+		}
+		.nav ul {
+        list-style: none;
+        background: pink;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+       }
+       .nav li {
+        display: inline-block;
+       }
+       .nav a {
+        text-decoration: none;
+        color: gray;
+        display: block;
+        padding: 15px;
+        font-size: 17px;
+        font-family: helvetica;
+        transition: 0.4s;
+       }
+       .nav a:hover {
+        background: #000;
+        transition: 0.4s;
+       }
+      
+       .collapsible {
+  			background-color: #555;
+  			border-radius: 25px;
+  			color: pink;
+  			cursor: pointer;
+  			padding: auto;
+  			width: 20%;
+  			border: none;
+  			text-align: center;
+  			outline: none;
+  			font-size: 15px;
+		}
+		.active, .collapsible:hover {
+  			background-color: #E3E3E3;
+		}
+		.content {
+  			padding: 0 18px;
+  			display: none;
+  			overflow: hidden;
+		}
+		.back-img {
+			background-image: url('');
+			width: 600px;
+			height: 600px;
+
+		}
+	</style>	
+</head>
+<body>
+<div class="nav">
+        <ul>
+            <li><a href="#calendar">Calendar</a></li>
+            <li><a href="#library">Library</a></li>
+           	<li><a href="#settings">Settings</a></li>
+        </ul>
+    </div>
+<p id="calendar"></p>
+<p id="library"></p>
+<p id="settings"></p>
+<button type="button" id="mood" class="collapsible">Mood Of The Day</button>
+
+<div class="content">
+<ul>
+	<li>Happy 😃 <span><input type="checkbox" ></span> </li> 
+	<li>Frustrated <span><input type="checkbox" ></span> </li>
+	<li>Excited 😁 <span><input type="checkbox" ></span> </li>
+	<li>Tired <span><input type="checkbox" ></span> </li>
+	<li>Sad ☹️ <span><input type="checkbox" ></span> </li>
+	<li>In Love 😍 <span><input type="checkbox" ></span> </li>
+	<li>disappointed 😞 <span><input type="checkbox" ></span> </li>
+	<li>Peaceful 😌 <span><input type="checkbox" ></span> </li>
+</ul>	
+</div>
+<div class="back-img">
+	<div class="text"></div>
+	
+</div>
+
+
+<script type="text/javascript" src="jquery-2.2.4.js"></script>
+<script type="text/javascript">
+	var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>
