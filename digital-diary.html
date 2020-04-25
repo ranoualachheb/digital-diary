@@ -22,23 +22,23 @@
 	</script>
 	<style>
 		body {
-  			background-image: url('https://image.freepik.com/free-photo/roses-bouquet-with-open-blank-diary-with-pen-smartphone-pink-background_23-2147942388.jpg');
+  			background-image: url('https://i.pinimg.com/originals/dc/2c/4d/dc2c4d4ebed7081065a6838fcd7433f2.jpg');
   			background-repeat: no-repeat;
   			background-attachment: fixed;
   			background-size: cover;
 		}
 		h1 {
 			font-family: Brush Script MT, Brush Script Std, cursive;
-			color: pink;
+			color: #BC8F8F;
 			font-size: 50px;
 			margin: 15px;
-			color: #FF1493;
+			
 		}
 		#container {
 			position:absolute;
 			top: 50%;
 			left: 50%;
-			margin-top: 10px; 
+			margin-top: 10px;
 			margin-left: -300px;
 		}
 		#login {
@@ -51,7 +51,7 @@
     		margin: 0.25rem;
     		transition: .5s;
     		font-size: 1.1rem;
-    		background-color: pink;
+    		background-color: 	white;
 		}
 		#password {
 			padding: 0.5rem 1rem;
@@ -63,7 +63,7 @@
     		margin: 0.25rem;
     		transition: .5s;
     		font-size: 1.1rem;
-    		background-color: pink;
+    		background-color: 	white;
     	}
     	#valid {
 			padding: 0.5rem 1rem;
@@ -75,14 +75,28 @@
     		margin: 0.25rem;
     		transition: .5s;
     		font-size: 0.8rem;
+    		margin-left: 1px;
+            background-color: pink;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            font-style: italic;
+            border: 3px solid white;
 		}
-
+		#intro{
+			font-family: Arial, sans-serif;
+		}
+		#pp{
+			color: black;
+		}
 	</style>
 </head>
 <body>
 	<h1> My Diary</h1>
 <h3 id="intro">Writing down in your <em style="color : pink">diary</em> will be a very pleasent experience</h3>
-<p>Do you have an account? <a href="#">Sign In</a></p>
+<p id ="pp"><b>Do you have an account?</b> <a href="#">Sign In</a></p>
 <br>
 <div id="container">
 	<input id= "login" type="text" placeholder="write your name" value="" ><br><br>
@@ -91,18 +105,15 @@
 	<i id="open" style="display: none" class="fa fa-eye" aria-hidden="true"></i>
 	<i id="close" class="fa fa-eye-slash" aria-hidden="true"></i>
 </span><br><br>
-
 <bold><button id="valid" type="button" onclick="validate()" >start your journey</button><bold>
 </div>
-
 <script type="text/javascript">
 	function validate(){
-
 	var userId = document.getElementById("login").value;
 	var passId = document.getElementById("password").value;
 if ( (userId === "khaoulabensaid" && passId === "@Khaoula123") || (userId === "ranouwa_lachheb" && passId === "@Ranoua123")){
 alert ("Login successfully");
-window.location.href = "MyDiary.html"; 
+window.location.href = "MyDiary.html";
 return false;
 }
 else{
@@ -110,6 +121,5 @@ else{
 }
 }
 </script>	
-
 </body>
 </html>

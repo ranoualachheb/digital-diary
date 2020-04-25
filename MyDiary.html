@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>My Secret Diary</title>
-	<style>
-		body {
-  			background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20190222/ourmid/pngtree-fashion-ballet-wallpaper-background-pattern-wallpaperwrapping-paper-image_50929.jpg');
-  			background-repeat: no-repeat;
-  			background-attachment: fixed;
-  			background-size: cover;
-		}
-		.nav ul {
+  <meta charset="utf-8">
+  <title>My Secret Diary</title>
+  <style>
+    body {
+        background-image: url('https://i.pinimg.com/originals/5a/aa/d5/5aaad5b9a60ca43ff77e8cce74c4fce5.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .nav ul {
         list-style: none;
-        background: pink;
+        background:   grey;
         text-align: center;
         padding: 0;
         margin: 0;
@@ -22,11 +22,11 @@
        }
        .nav a {
         text-decoration: none;
-        color: gray;
+        color: white;
         display: block;
         padding: 15px;
         font-size: 17px;
-        font-family: helvetica;
+        font-family: Florence, cursive;;
         transition: 0.4s;
        }
        .nav a:hover {
@@ -35,70 +35,98 @@
        }
       
        .collapsible {
-  			background-color: #555;
-  			border-radius: 25px;
-  			color: pink;
-  			cursor: pointer;
-  			padding: auto;
-  			width: 20%;
-  			border: none;
-  			text-align: center;
-  			outline: none;
-  			font-size: 15px;
-		}
-		.active, .collapsible:hover {
-  			background-color: #E3E3E3;
-		}
-		.content {
-  			padding: 0 18px;
-  			display: none;
-  			overflow: hidden;
-		}
-		.back-img {
-			background-image: url('');
-			width: 600px;
-			height: 600px;
+        background-color: #BDB76B;
+        border-radius: 25px;
+        color: white;
+        cursor: pointer;
+        padding: auto;
+        width: 25%;
+        border: none;
+        text-align: center;
+        outline: none;
+        font-size: 17px;
+        font-family: Times New Roman, serif;
+    }
+    .active, .collapsible:hover {
+        background-color: #E3E3E3;
+    }
+    .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        color:black;
+        font-family: Oldtown, fantasy;
+      }
+    #sheet{
+      width:500px;
+      height: 400px;
+      font-family: Brush Script MT, Brush Script Std, cursive;
+      font-size: 30px;
+      border-radius: 25px;
+      background-color: #FFF5EE;
+    }
+    #mySecret {
+      font-family: Brush Script MT, Brush Script Std, cursive;
+      font-size: 30px;
+      border: 1px black solid;
+      border-radius: 15px;
+      background-color: #FFF5EE;
+      width: 700px;
+      height: 100px;
+    }
+    #save {
+      background-color: #FAEBD7;
+      padding: 0.5rem 1rem;
+      outline: none;
+      border: none;
+      height: 30px;
+      border-radius: 25px;
+      width: 110px;
+      margin: 0.25rem;
+      transition: .5s;
+      font-size: 1rem;
+      margin-left: 60%;
 
-		}
-	</style>	
+    }
+  </style>  
 </head>
 <body>
 <div class="nav">
         <ul>
-            <li><a href="#calendar">Calendar</a></li>
-            <li><a href="#library">Library</a></li>
-           	<li><a href="#settings">Settings</a></li>
+            <li><a href="calendar.html"><b>Calendar</b></a></li>
+            <li><a class="library" href="#library"><b>Library</b></a></li>
+            <li><a href="#settings"><b>Settings</b></a></li>
         </ul>
     </div>
-<p id="calendar"></p>
-<p id="library"></p>
-<p id="settings"></p>
-<button type="button" id="mood" class="collapsible">Mood Of The Day</button>
-
+    <br>
+    <div id="container">
+      <button type="button" id="mood" class="collapsible"><b>Mood Of The Day</b></button>
 <div class="content">
 <ul>
-	<li>Happy 😃 <span><input type="checkbox" ></span> </li> 
-	<li>Frustrated <span><input type="checkbox" ></span> </li>
-	<li>Excited 😁 <span><input type="checkbox" ></span> </li>
-	<li>Tired <span><input type="checkbox" ></span> </li>
-	<li>Sad ☹️ <span><input type="checkbox" ></span> </li>
-	<li>In Love 😍 <span><input type="checkbox" ></span> </li>
-	<li>disappointed 😞 <span><input type="checkbox" ></span> </li>
-	<li>Peaceful 😌 <span><input type="checkbox" ></span> </li>
-</ul>	
+  <li><b>H a p p y</b> 😃 <span><input id="happy" type="checkbox" onclick="check()"></span> </li> 
+  <li><b>E x c i t e d</b> 😁 <span><input id="excited" type="checkbox" onclick="check2()" ></span> </li>
+  <li><b>T i r e d</b> <span><input id="tired" type="checkbox" onclick="check3()"></span> </li>
+  <li><b>S a d</b> ☹️ <span><input id="sad" type="checkbox" onclick="check4()"></span> </li>
+  <li><b>I n  L o v e</b> 😍 <span><input id="love" type="checkbox" onclick="check5()" ></span> </li>
+  <li><b>d i s a p p o i n t e d</b> 😞 <span><input id="disappointed" type="checkbox" onclick="check6()" ></span> </li>
+  <li><b>P e a c e f u l</b> 😌 <span><input id="peaceful" type="checkbox" onclick="check7()" ></span> </li>
+</ul> 
 </div>
-<div class="back-img">
-	<div class="text"></div>
-	
+<div id='text1'>
+<center><textarea id="sheet" cols="23" rows="8"></textarea></center>
 </div>
+<button id="save" type="button">Save Me</button>
+</div>
+    </div>
+<div id="yourSecret" style="display: none">
+</div>
+<script  src='https://code.jquery.com/jquery-2.2.4.js'></script>
 
-
-<script type="text/javascript" src="jquery-2.2.4.js"></script>
 <script type="text/javascript">
-	var coll = document.getElementsByClassName("collapsible");
+  var array = document.getElementsByClassName("collapsible");
 var i;
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
+for (i = 0; i < array.length; i++) {
+    array[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.display === "block") {
@@ -108,6 +136,85 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+    function check(){
+      var box= document.getElementById('happy')
+      var paper= document.getElementById('sheet')
+       if(box.checked == true){
+           alert("Glad you are ! hurry up and keep that memory alive");
+           paper.style.backgroundColor='#DA70D6';     
+                   }
+    }
+    
+    function check2(){
+      var box= document.getElementById('excited')
+      var paper= document.getElementById('sheet')
+       if(box.checked == true){
+           alert("Whooo run the world ??, YOUUUU");
+           paper.style.backgroundColor='#3CB371';     
+                   }
+    }
+    function check3(){
+      var box= document.getElementById('tired')
+      var paper= document.getElementById('sheet')
+       if(box.checked == true){
+           alert("Tomorrow you won't remember what's like to be tired");
+           paper.style.backgroundColor='#778899';     
+                   }
+    }function check4(){
+      var box= document.getElementById('sad')
+      var paper= document.getElementById('sheet')
+       if(box.checked == true){
+           alert("We are here to help you let it all out !");
+           paper.style.backgroundColor='#2F4F4F';     
+                   }
+    }function check5(){
+      var box= document.getElementById('love')
+      var paper= document.getElementById('sheet')
+       if(box.checked == true){
+           alert("You found your prince charming 😉 ? humm, i wanna know the details");
+           paper.style.backgroundColor='#CD5C5C';     
+                   }
+    }function check6(){
+      var box= document.getElementById('disappointed')
+      var paper= document.getElementById('sheet')
+       if(box.checked == true){
+           alert("Don't let today's disappointment cast a shadow on tomorrow's DREAM !");
+           paper.style.backgroundColor='#CD853F';     
+                   }
+    }function check7(){
+      var box= document.getElementById('peaceful')
+      var paper= document.getElementById('sheet')
+       if(box.checked == true){
+           alert("Must be meditation hein ? 😛 ");
+           paper.style.backgroundColor='#B0E0E6';     
+                   }
+    }
+    $(document).ready(function(){
+      
+      $('#save').click(function(){
+        $('#yourSecret').append('<p id="mySecret">' +  $('#sheet').val() + '</p>');
+        $('#sheet').val('');
+      })
+
+    })
+
+
+    $(document).ready(function(){
+      var i= 0;
+      $('.library').click(function(){
+        if(i%2=== 0){
+          $('#yourSecret').show();
+        $('#container').hide();
+        i++;
+        } else {
+          $('#yourSecret').hide();
+        $('#container').show();
+        i++;
+        }
+        
+
+      })    
+    })
 </script>
 </body>
 </html>
